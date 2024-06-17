@@ -1,0 +1,1 @@
+import{_ as o,o as s,c as a,a as c,t as n,G as r,H as l}from"./Bue3jB_G.js";const _={class:"section_header"},i={__name:"AppSectionHeader",props:{textColor:String,title:String},setup(e){return(t,d)=>(s(),a("div",_,[c("h2",{style:r({color:e.textColor}),class:"title"},n(e.title),5),l(t.$slots,"default",{},void 0)]))}},m=o(i,[["__scopeId","data-v-77cbe77c"]]);export{m as _};

@@ -1,0 +1,1 @@
+import{_ as s,o,c as n,a as e,H as c}from"./Bue3jB_G.js";const _={},a={class:"page_title"},r={class:"container"},d={class:"page_title-content"};function i(t,l){return o(),n("section",a,[e("div",r,[e("div",d,[e("h1",null,[c(t.$slots,"default",{},void 0)])])])])}const f=s(_,[["render",i],["__scopeId","data-v-160bb776"]]);export{f as _};

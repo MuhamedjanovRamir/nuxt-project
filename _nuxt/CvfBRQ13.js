@@ -1,0 +1,1 @@
+import{_ as e,o as s,c as a,a as r}from"./Bue3jB_G.js";const n={class:"partnier"},c=["href"],o={class:"img"},_=["src"],i={__name:"AppPartnierCard",props:{partnierUrl:String,partnierImg:String},setup(t){return(p,d)=>(s(),a("div",n,[r("a",{href:t.partnierUrl},[r("div",o,[r("img",{src:t.partnierImg},null,8,_)])],8,c)]))}},l=e(i,[["__scopeId","data-v-2a4b985c"]]);export{l as _};
