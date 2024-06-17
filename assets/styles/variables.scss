@@ -1,0 +1,29 @@
+/* text */
+$color-text-primary: #ffff;
+$color-text-dark: #1c2f3f;
+$color-text-gray: #465863;
+$color-text-green: #06b48b;
+
+$font-family-regular: 'Gilroy';
+$font-family-medium: 'Gilroy-medium';
+$font-family-bold: 'Gilroy-bold';
+
+/* background */
+$color-bg-dark-green: #044636;
+$color-bg-green: #078b6c;
+$color-bg-light-green: #06b48b;
+$color-bg-opacity-green: #e0f6f1;
+
+/* border */
+$border-big-radius: 20px;
+$border-medium-radius: 8px;
+$border-small-radius: 4px;
+
+$border-active: 2px solid $color-bg-light-green;
+$border-disabled: 2px solid #c5d4e0;
+$border-link: 1px solid hsla(0, 0%, 100%, .4);
+
+/* opacity */
+$opacity-text: 0.8;
+$opacity-link: rgba(255, 255, 255, .1);
+$opacity-tabs-hover: rgba(6, 180, 139, .1);
