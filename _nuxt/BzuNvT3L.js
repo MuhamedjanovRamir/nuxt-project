@@ -1,0 +1,1 @@
+import{_ as o,o as t,c as n,y as s}from"./sC8YrB2x.js";const _={},c={class:"tab"};function a(e,r){return t(),n("div",c,[s(e.$slots,"default",{},void 0)])}const f=o(_,[["render",a],["__scopeId","data-v-57f3d590"]]);export{f as _};
