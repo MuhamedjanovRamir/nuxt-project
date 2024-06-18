@@ -1,5 +1,5 @@
 <script setup>
-import SectionProgram from '../components/program/SectionProgram.vue'
+import SectionProgram from '~/components/sections/program/SectionProgram.vue'
 </script>
 
 <template>

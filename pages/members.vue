@@ -1,5 +1,5 @@
 <script setup>
-import SectionMembers from '../components/members/SectionMembers.vue'
+import SectionMembers from '~/components/sections/members/SectionMembers.vue'
 </script>
 
 <template>

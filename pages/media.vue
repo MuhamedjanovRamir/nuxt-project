@@ -1,5 +1,5 @@
 <script setup>
-import SectionMedia from '../components/media/SectionMedia.vue'
+import SectionMedia from '~/components/sections/media/SectionMedia.vue'
 </script>
 
 <template>
