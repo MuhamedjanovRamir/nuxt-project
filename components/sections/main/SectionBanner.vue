@@ -297,6 +297,14 @@ import { INTRODUCING_CARDS } from '~/utils/constants'
   .introducing_extra-content {
     row-gap: 24px;
 
+    .extra_content-text {
+      h3 {
+        font-size: 32px;
+      }
+
+      p { font-size: 18px; }
+    }
+
     .extra_content-image {
       flex: 0 0 100%;
       max-width: 100%;
@@ -329,7 +337,7 @@ import { INTRODUCING_CARDS } from '~/utils/constants'
     flex-wrap: wrap;
     justify-content: center;
   }
-  .introducing_content .introducing_content-buttons .introducing_content-button span[data-v-80f9b194] {
+  .introducing_content .introducing_content-buttons .introducing_content-button .button_text {
     font-size: 18px;
     font-family: $font-family-regular;  
   }
