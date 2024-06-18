@@ -1,1 +1,0 @@
-import{_ as o,o as t,c,H as n}from"./Bue3jB_G.js";const s={},_={class:"tab"};function a(e,r){return t(),c("div",_,[n(e.$slots,"default",{},void 0)])}const f=o(s,[["render",a],["__scopeId","data-v-4c43767d"]]);export{f as _};
