@@ -4,13 +4,13 @@ import { NAV_LINKS } from '~/utils/constants'
 
 <template>
   <footer class="footer">
-    <app-waves wave-color="#078b6c"></app-waves>
+    <BaseWaves wave-color="#078b6c"></BaseWaves>
   
     <div class="footer_content">
       <div class="container">
         <div class="footer_content-wrapper">
           <div class="footer_content-item">
-            <app-logo color-theme="light"></app-logo>
+            <BaseLogo color-theme="light"></BaseLogo>
             <div class="copyright"><span>© 2024 International Pharmceutical Forum of Uzbekistan</span></div>
             <div class="author"><span>Разработка сайта:</span> <a href="#">Online Service Group</a></div>
           </div>

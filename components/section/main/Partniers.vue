@@ -1,11 +1,7 @@
-<script setup>
-import { PARTNIERS } from '~/utils/constants'
-</script>
-
 <template>
   <section class="section partniers">
     <div class="container"> 
-      <app-section-header title="Партнеры форума" text-color="#1c2f3f" class="partniers_header"></app-section-header>
+      <SectionHeader title="Партнеры форума" text-color="#1c2f3f" class="partniers_header"></SectionHeader>
 
       <div class="partniers_content">
         <div 
@@ -20,7 +16,7 @@ import { PARTNIERS } from '~/utils/constants'
               :key="item"
               class="cardtnier_cards-item"   
             >
-              <app-partnier-card 
+              <CardPartnier 
                 :partnier-url="item.url"
                 :partnier-img="item.logo"
               />

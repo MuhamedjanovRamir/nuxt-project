@@ -1,23 +1,19 @@
-<script setup>
-import { SPEAKERS_CARDS } from '~/utils/constants'
-</script>
-
 <template>
-  <app-waves wave-color="#e0f6f1 "></app-waves>
+  <BaseWaves wave-color="#e0f6f1 "></BaseWaves>
   <section class="section speakers">
     <div class="container">
-      <app-section-header class="speakers_header" title="Основные спикеры" text-color="#1c2f3f">
-        <app-button button-type="outline" class="button">
+      <SectionHeader class="speakers_header" title="Основные спикеры" text-color="#1c2f3f">
+        <BaseButton button-type="outline" class="button">
           <span class="button_text">Смотреть все</span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="t-icon t-icon-svg t-icon-arrow-left" style="width:16px;height:16px;flex:16px 0 0;fill:transparent;stroke:transparent;">
             <path fill="#06B48B" d="M12.172 7 6.808 1.636 8.222.222 16 8l-7.778 7.778-1.414-1.414L12.172 9H0V7z"></path>
           </svg>
-        </app-button>
-      </app-section-header>
+        </BaseButton>
+      </SectionHeader>
 
       <div class="speakers_content">
         <div v-for="card in SPEAKERS_CARDS" :key="card" class="speakers_content-item">
-          <app-speaker-card
+          <CardSpeaker
             :speaker-image="card.imgUrl"
             :speaker-name="card.name"
             :speaker-position="card.position"

@@ -1,9 +1,9 @@
 <script setup>
-defineProps({
-  time: String,
-  title: String,
-  info: String
-})
+  defineProps({
+    time: String,
+    title: String,
+    info: String
+  })
 </script>
 
 <template>

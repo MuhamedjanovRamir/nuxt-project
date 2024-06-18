@@ -1,14 +1,9 @@
-<script setup>
-import { MEMBERS_CARDS } from '~/utils/constants'
-</script>
-
-
 <template>
   <section class="section members">
     <div class="container">
       
-      <app-section-header title="Участники Форума" text-color="#1c2f3f" class="members_header">
-        <app-button button-type="outline" text-color="#1c2f3f" class="members_header-button">
+      <SectionHeader title="Участники Форума" text-color="#1c2f3f" class="members_header">
+        <BaseButton button-type="outline" text-color="#1c2f3f" class="members_header-button">
           <span class="button_text">Смотреть все</span>
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
@@ -17,14 +12,14 @@ import { MEMBERS_CARDS } from '~/utils/constants'
           >
             <path fill="#06B48B" d="M12.172 7 6.808 1.636 8.222.222 16 8l-7.778 7.778-1.414-1.414L12.172 9H0V7z"></path>
           </svg>
-        </app-button>
-      </app-section-header>
+        </BaseButton>
+      </SectionHeader>
 
       <div class="members_content">
         <article v-for="card in MEMBERS_CARDS" :key="card" 
           class="members_content-card"
         >
-          <app-member-card
+          <CardMember
             :link-url="card.url"
             :image-url="card.imgUrl"
             :content-text="card.text"

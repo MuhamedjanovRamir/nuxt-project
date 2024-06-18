@@ -1,10 +1,9 @@
 <script setup>
-import AppProgramItem from './AppProgramItem.vue'
-import AppProgramTab from './AppProgramTab.vue'
-import { PROGRAM_DAY_ONE, PROGRAM_DAY_TWO } from '~/utils/constants' 
+  import AppProgramItem from './AppProgramItem.vue'
+  import AppProgramTab from './AppProgramTab.vue'
 
-const activeTab = ref('one')
-const setActive = value => activeTab.value = value 
+  const activeTab = ref('one')
+  const setActive = value => activeTab.value = value 
 </script>
 
 <template>

@@ -1,13 +1,9 @@
-<script setup>
-import { NAV_LINKS } from '~/utils/constants'
-</script>
-
 <template>
   <nav class="navigation">
     <div v-for="link in NAV_LINKS" :key="link"
       class="navigation_item"
     >
-      <app-link :link-path="link.path">{{ link.text }}</app-link>
+      <BaseLink :link-path="link.path">{{ link.text }}</BaseLink>
     </div>
   </nav>
 </template>

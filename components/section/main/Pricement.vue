@@ -1,22 +1,21 @@
 <script setup>
-
-const activeTab = ref('one')
-const setTab = value => activeTab.value = value
+  const activeTab = ref('one')
+  const setTab = value => activeTab.value = value
 </script>
 
 <template>
   <section class="section pricement">
     <div class="container">
-      <app-section-header title="Стоимость и условия участия" text-color="#1c2f3f" class="pricement_header"/>
+      <SectionHeader title="Стоимость и условия участия" text-color="#1c2f3f" class="pricement_header"/>
 
       <div class="pricement_tabs">
         <div class="buttons">
-          <app-button @click="setTab('one')" :class="['button', { active: activeTab === 'one'}]" button-type="outline">
+          <BaseButton @click="setTab('one')" :class="['button', { active: activeTab === 'one'}]" button-type="outline">
             <span class="button_text">Участие</span>
-          </app-button>
-          <app-button @click="setTab('two')" :class="['button', { active: activeTab === 'two'}]" button-type="outline">
+          </BaseButton>
+          <BaseButton @click="setTab('two')" :class="['button', { active: activeTab === 'two'}]" button-type="outline">
             <span class="button_text">Стать партнером</span>
-          </app-button>
+          </BaseButton>
         </div>
       </div>
 
@@ -27,9 +26,9 @@ const setTab = value => activeTab.value = value
             <div class="price_card-body">
               <span class="price_body-price">$1 500</span>
               <span class="price_body-subtitle">За одного делегата</span>
-              <app-button class="price_body-button" button-type="opacity">
+              <BaseButton class="price_body-button" button-type="opacity">
                 <span class="button_text">Зарегистрироваться</span>
-              </app-button>
+              </BaseButton>
             </div>
           </div>
         </div>
@@ -56,7 +55,7 @@ const setTab = value => activeTab.value = value
               <input class="input" placeholder="Должность" type="text">
             </div>
           </div>
-          <app-button class="button" button-type="filled"><span class="button_text">Зарегистрироваться</span></app-button>
+          <BaseButton class="button" button-type="filled"><span class="button_text">Зарегистрироваться</span></BaseButton>
         </form>
       </div>
     </div>

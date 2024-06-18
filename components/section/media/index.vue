@@ -1,57 +1,55 @@
 <script setup>
-import { MEDIA_DATA } from '~/utils/constants'
+  const activeDateFilter = ref('15-16 Июня, 2022 года')
+  const activeGalleryTypeFilter = ref('Фотогалерея')
 
-const activeDateFilter = ref('15-16 Июня, 2022 года')
-const activeGalleryTypeFilter = ref('Фотогалерея')
+  const setActiveDateFilter = value => activeDateFilter.value = value
+  const setActiveGalleryTypeFilter = value => activeGalleryTypeFilter.value = value
 
-const setActiveDateFilter = value => activeDateFilter.value = value
-const setActiveGalleryTypeFilter = value => activeGalleryTypeFilter.value = value
+  const currentDataByDate = computed(() => {
+    return MEDIA_DATA.find(item => item.date === activeDateFilter.value)
+  })
 
-const currentDataByDate = computed(() => {
-  return MEDIA_DATA.find(item => item.date === activeDateFilter.value)
-})
-
-const contentGallery = computed(() => {
-  switch (activeGalleryTypeFilter.value) {
-    case 'Фотогалерея':
-      return currentDataByDate.value.photo
-      break
-    case 'Видеогалерея':
-      return currentDataByDate.value.video
-      break
-    case 'Презентация':
-      return currentDataByDate.value.presentations
-      break
-  }
-})
+  const contentGallery = computed(() => {
+    switch (activeGalleryTypeFilter.value) {
+      case 'Фотогалерея':
+        return currentDataByDate.value.photo
+        break
+      case 'Видеогалерея':
+        return currentDataByDate.value.video
+        break
+      case 'Презентация':
+        return currentDataByDate.value.presentations
+        break
+    }
+  })
 </script>
 
 <template>
   <section class="media">
     <div class="container">
       <div class="media_tabs">
-        <app-button-tab
+        <BaseTab
           v-for="date in MEDIA_DATA"
           :key="date"
           @click="setActiveDateFilter(date.date)"
           :class="['tab', {active: activeDateFilter === date.date}]"
         >
           <span>{{ date.date }}</span>
-        </app-button-tab>
+        </BaseTab>
       </div>
 
       <div class="line"></div>
 
       <div class="media_tabs">
-        <app-button-tab @click="setActiveGalleryTypeFilter('Фотогалерея')" :class="['tab', {active: activeGalleryTypeFilter === 'Фотогалерея'}]"><span>Фотогалерея</span></app-button-tab>
-        <app-button-tab @click="setActiveGalleryTypeFilter('Видеогалерея')" :class="['tab', {active: activeGalleryTypeFilter === 'Видеогалерея'}]"><span>Видеогалерея</span></app-button-tab>
-        <app-button-tab v-if="currentDataByDate.presentations" @click="setActiveGalleryTypeFilter('Презентация')" :class="['tab', {active: activeGalleryTypeFilter === 'Презентация'}]"><span>Презентация</span></app-button-tab>
+        <BaseTab @click="setActiveGalleryTypeFilter('Фотогалерея')" :class="['tab', {active: activeGalleryTypeFilter === 'Фотогалерея'}]"><span>Фотогалерея</span></BaseTab>
+        <BaseTab @click="setActiveGalleryTypeFilter('Видеогалерея')" :class="['tab', {active: activeGalleryTypeFilter === 'Видеогалерея'}]"><span>Видеогалерея</span></BaseTab>
+        <BaseTab v-if="currentDataByDate.presentations" @click="setActiveGalleryTypeFilter('Презентация')" :class="['tab', {active: activeGalleryTypeFilter === 'Презентация'}]"><span>Презентация</span></BaseTab>
       </div>
 
       <div class="media_content">
         <template v-if="activeGalleryTypeFilter === 'Фотогалерея'">
           <article v-for="item in contentGallery" :key="item.id" class="media_content-item">
-            <app-media-card
+            <CardMedia
               card-type="photo"
               :image-url="item.img"
             />
@@ -61,7 +59,7 @@ const contentGallery = computed(() => {
         <template v-else>
           <article v-for="item in contentGallery" :key="item.id" class="media_content-item">
             <a :href="item.url">
-              <app-media-card 
+              <CardMedia
                 :image-url="item.img"
                 card-type="video"
               />

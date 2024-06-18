@@ -1,38 +1,36 @@
 <script setup>
-import TheScheduleTable from './TheScheduleTable.vue'
-import { PROGRAM_DAY_ONE, PROGRAM_DAY_TWO } from '~/utils/constants'
-
-const activeTab = ref('one')
-const setActive = value => activeTab.value = value;
+  import TheScheduleTable from './TheScheduleTable.vue'
+  const activeTab = ref('one')
+  const setActive = value => activeTab.value = value;
 </script>
 
 <template>
-  <app-waves wave-color="#059a77"></app-waves>
+  <BaseWaves wave-color="#059a77"></BaseWaves>
   <section class="section schedule">
     <div class="container">
 
-      <app-section-header title="Программа форума" text-color="#ffff" class="schedule_header"></app-section-header>
+      <SectionHeader title="Программа форума" text-color="#ffff" class="schedule_header"></SectionHeader>
       <div class="schedule_subtitle">Финальная версия программы форума будет доступна в ближайшее время</div>
 
       <div class="schedule_content">
         <div class="schedule_tabs">
           <div class="border"></div>
           <div class="buttons">
-            <app-button 
+            <BaseButton 
               :class="['button', { active:  activeTab === 'one' }]" 
               button-type="outline"
               @click="setActive('one')"
             >
               <span class="button_text">День 1</span>
-            </app-button>
+            </BaseButton>
 
-            <app-button 
+            <BaseButton 
               :class="['button', { active:  activeTab === 'two' }]" 
               button-type="outline"
               @click="setActive('two')"
             >
               <span class="button_text">День 2</span>
-            </app-button>
+            </BaseButton>
           </div>
           <div class="border"></div>
         </div>

@@ -1,7 +1,7 @@
 <template>
   <section class="section advantages">
     <div class="container">
-      <app-section-header title="Преимущества" text-color="#1c2f3f" class="advantages_header"></app-section-header>
+      <SectionHeader title="Преимущества" text-color="#1c2f3f" class="advantages_header"></SectionHeader>
 
       <div class="advantages_content">
         <div class="advantages_content-line">

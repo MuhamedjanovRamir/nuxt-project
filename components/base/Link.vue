@@ -3,9 +3,9 @@ defineProps({ linkPath: String })
 </script>
 
 <template>
-  <nuxt-link class="link" :to="linkPath">
+  <NuxtLink class="link" :to="linkPath">
     <slot />
-  </nuxt-link>
+  </NuxtLink>
 </template>
 
 <style lang="scss" scoped>

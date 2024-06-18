@@ -1,7 +1,3 @@
-<script setup>
-import { INTRODUCING_CARDS } from '~/utils/constants'
-</script>
-
 <template>
   <section class="introducing">
     <div class="container">
@@ -12,15 +8,15 @@ import { INTRODUCING_CARDS } from '~/utils/constants'
           <p class="introducing_content-subtitle">Крупнейшее международное событие, посвященное решению наиболее актуальных проблем фармацевтической отрасли нового Узбекистана</p>
   
           <div class="introducing_content-buttons">
-            <app-button button-type="opacity" class="introducing_content-button">
+            <BaseButton button-type="opacity" class="introducing_content-button">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" class="t-icon t-icon-svg t-icon-clock" style="width: 32px; height: 32px; flex: 0 0 32px; fill: transparent; stroke: transparent;"><path fill="#07A47F" d="M27 17a11 11 0 1 1-22 0 11 11 0 0 1 22 0"></path><path fill="#1DDDAF" d="M16 5a12 12 0 1 0 12 12A12.014 12.014 0 0 0 16 5m0 22a10 10 0 1 1 10-10 10.01 10.01 0 0 1-10 10m5.708-15.707a1 1 0 0 1 0 1.415l-5 5a1 1 0 0 1-1.415-1.415l5-5a1 1 0 0 1 1.415 0M12 2a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2h-6a1 1 0 0 1-1-1"></path></svg>
               <span class="button_text">30-31 мая, 2024</span>
-            </app-button>
+            </BaseButton>
   
-            <app-button button-type="opacity" class="introducing_content-button">
+            <BaseButton button-type="opacity" class="introducing_content-button">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" class="t-icon t-icon-svg t-icon-location" style="width: 32px; height: 32px; flex: 0 0 32px; fill: transparent; stroke: transparent;"><path fill="#07A47F" d="M19.77 21.961a1 1 0 0 0-.17-.014h-7.2q-.086 0-.17.014C8.856 22.545 7 23.744 7 25.333 7 27.853 11.665 29 16 29s9-1.147 9-3.667c0-1.589-1.857-2.788-5.23-3.372"></path><path fill="#1DDDAF" d="M16 3.381c-4.963 0-9 4.038-9 9 0 6.215 4.879 13.571 9 13.571s9-7.356 9-13.57c0-4.963-4.037-9-9-9m0 13.428a4.43 4.43 0 0 1-4.428-4.428A4.435 4.435 0 0 1 16 7.952a4.434 4.434 0 0 1 4.428 4.43A4.433 4.433 0 0 1 16 16.808m2.428-4.428A2.43 2.43 0 0 1 16 14.81a2.43 2.43 0 0 1-2.428-2.428c0-1.338 1.09-2.429 2.428-2.429a2.43 2.43 0 0 1 2.428 2.43"></path></svg>
               <span class="button_text">InterContinental Tashkent - Shakhrisabz Street 2</span>
-            </app-button>
+            </BaseButton>
           </div>
         </div>
 

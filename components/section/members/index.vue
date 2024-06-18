@@ -1,21 +1,19 @@
 <script setup>
-import { MEMBERS_CARDS, COMPANIES, SPEAKERS_CARDS } from '~/utils/constants'
+  const tabTitles = [
+    'Участники форума',
+    'Приглашенные компании',
+    'Спикеры и гости форума'
+  ]
 
-const tabTitles = [
-  'Участники форума',
-  'Приглашенные компании',
-  'Спикеры и гости форума'
-]
-
-const activeTab = ref('Участники форума')
-const setActive = value => activeTab.value = value
+  const activeTab = ref('Участники форума')
+  const setActive = value => activeTab.value = value
 </script>
 
 <template>
   <section class="members">
     <div class="container">
       <div class="members_tabs">
-        <app-button-tab 
+        <BaseTab 
           v-for="tab in tabTitles" 
           :key="tab" 
           :subtitle="tab"
@@ -23,7 +21,7 @@ const setActive = value => activeTab.value = value
           :class="['tab', {active: activeTab === tab}]"
         >
           <span>{{ tab }}</span>
-        </app-button-tab>
+        </BaseTab>
       </div>
 
       <div class="members_content">
@@ -32,7 +30,7 @@ const setActive = value => activeTab.value = value
         <div class="list">
           <template v-if="activeTab === 'Участники форума'">
             <div v-for="item in MEMBERS_CARDS" :key="item" class="list_item-member">
-              <app-member-card 
+              <CardMember
                 :link-url="item.url"
                 :image-url="item.imgUrl"
                 :content-text="item.text"
@@ -42,7 +40,7 @@ const setActive = value => activeTab.value = value
 
           <template v-if="activeTab === 'Приглашенные компании'">
             <div v-for="item in COMPANIES" :key="item" class="list_item-partniers">
-              <app-partnier-card 
+              <CardPartnier
                 :partnier-url="item.url"
                 :partnier-img="item.logo"
               />
@@ -51,7 +49,7 @@ const setActive = value => activeTab.value = value
 
           <template v-if="activeTab === 'Спикеры и гости форума'">
             <div v-for="item in SPEAKERS_CARDS" :key="item" class="list_item-speakers">
-              <app-speaker-card 
+              <CardSpeaker
                 :speaker-image="item.imgUrl"
                 :speaker-name="item.name"
                 :speaker-position="item.position"

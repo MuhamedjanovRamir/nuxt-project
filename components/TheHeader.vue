@@ -19,12 +19,12 @@ const closeMenu = () => isOpenMenu.value = false
   <header class="header">
     <div class="container">
       <div class="header_content">
-        <app-logo></app-logo>
+        <BaseLogo></BaseLogo>
         <the-navbar class="header_nav"></the-navbar>
 
         <div class="header_buttons">
           <div class="header_buttons-select" :class="{ open: isOpenSelect }">
-            <app-button
+            <BaseButton
               button-type="opacity"
               @click="toggleLanguageSelect"
               class="header_buttons-selected"
@@ -37,21 +37,21 @@ const closeMenu = () => isOpenMenu.value = false
               >
                 <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m1 1.5 5 5 5-5"></path>
               </svg>
-            </app-button>
+            </BaseButton>
 
             <transition name="fade">
-              <app-button
+              <BaseButton
                 button-type="opacity"
                 v-if="isOpenSelect"
                 class="header_buttons-option"
                 @click="changeSelectedOption(languageOption)"
               >
                 <span class="button_title">{{ languageOption }}</span>
-              </app-button>
+              </BaseButton>
             </transition>
           </div>
 
-          <app-button button-type="filled"><span class="button_title">Зарегистрироваться</span></app-button>
+          <BaseButton button-type="filled"><span class="button_title">Зарегистрироваться</span></BaseButton>
         </div>
 
         <div @click="openMenu" class="header_burger">
@@ -60,7 +60,7 @@ const closeMenu = () => isOpenMenu.value = false
 
         <div class="header_menu" :class="{open: isOpenMenu}">
           <div class="menu_header">
-            <app-logo></app-logo>
+            <BaseLogo></BaseLogo>
             <svg @click="closeMenu" xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 256 256" class="t-icon t-icon-svg t-icon-x close-icon" style="width: 30px; height: 30px; flex: 0 0 30px; fill: #ffff; stroke: transparent;"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"></path></svg>
           </div>
 
@@ -68,11 +68,11 @@ const closeMenu = () => isOpenMenu.value = false
             <the-navbar @click="closeMenu" class="nav"></the-navbar>
             <div class="menu_footer">
               <div class="menu_footer-item">
-                <app-button @click="changeSelectedOption('РУС')" :class="['lang', {active: selectedLanguage === 'РУС'}]" button-type="outline"><span class="button_text">РУС</span></app-button>
-                <app-button @click="changeSelectedOption('ENG')" :class="['lang', {active: selectedLanguage === 'ENG'}]" button-type="outline"><span class="button_text">ENG</span></app-button>
+                <BaseButton @click="changeSelectedOption('РУС')" :class="['lang', {active: selectedLanguage === 'РУС'}]" button-type="outline"><span class="button_text">РУС</span></BaseButton>
+                <BaseButton @click="changeSelectedOption('ENG')" :class="['lang', {active: selectedLanguage === 'ENG'}]" button-type="outline"><span class="button_text">ENG</span></BaseButton>
               </div>
               <div class="menu_footer-item">
-                <app-button class="button" button-type="filled"><span class="button_text">Зарегистрироваться</span></app-button>
+                <BaseButton class="button" button-type="filled"><span class="button_text">Зарегистрироваться</span></BaseButton>
               </div>
             </div>
           </div>

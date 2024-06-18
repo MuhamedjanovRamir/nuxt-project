@@ -1,22 +1,18 @@
-<script setup>
-import { ORGANIZERS } from '~/utils/constants'
-</script>
-
 <template>
-  <app-waves wave-color="#e0f6f1"></app-waves>
+  <BaseWaves wave-color="#e0f6f1"></BaseWaves>
   <section class="section organizers">
     <div class="container">
-      <app-section-header title="Организаторы" color="#1c2f3f" class="organizers_header" />
+      <SectionHeader title="Организаторы" color="#1c2f3f" class="organizers_header" />
 
       <div class="organizers_content">
         <div class="organizers_content-item" v-for="organizer in ORGANIZERS" :key="organizer">
-        <div class="card">
-          <div class="img">
-            <img :src="organizer.img">
-          </div>
+          <div class="card">
+            <div class="img">
+              <img :src="organizer.img">
+            </div>
 
-          <p class="info">{{ organizer.info }}</p>
-        </div>
+            <p class="info">{{ organizer.info }}</p>
+          </div>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <script setup>
-defineProps({
-  tableData: Object
-})
+  defineProps({
+    tableData: Object
+  })
 </script>
 
 <template>

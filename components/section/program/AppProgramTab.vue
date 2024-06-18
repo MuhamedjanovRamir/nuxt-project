@@ -1,8 +1,8 @@
 <script setup>
-defineProps({
-  title: String,
-  subtitle: String
-})
+  defineProps({
+    title: String,
+    subtitle: String
+  })
 </script>
 
 <template>
